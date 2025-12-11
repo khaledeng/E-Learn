@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Orbit Academy</title>
+    <link rel="stylesheet" href="Contact.css"/>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="header-container">
+          <li class="logo">
+            <a href="Home.html">
+              <img src="./Res/Logo.jpg" alt="Orbit Academy logo" width="50" />
+            </a>
+          </li>
+          <li><a href="Home.html">Satellite Explore</a></li>
+          <li class="search">
+            <input
+              class="input-header-container"
+              type="search"
+              placeholder="Search for anything"
+            />
+          </li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="../About/About.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="Sign up .html">Sign up </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="contact-main">
+      <h2>Contact Us</h2>
+      <p class="contact-intro">
+        We’d love to hear from you! Fill out the form below or reach us through
+        our contact details.
+      </p>
+
+      <div class="contact-container">
+        <!-- Contact Form -->
+        <form class="contact-form">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+
+          <button type="submit" class="contact-btn">Send Message</button>
+        </form>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p>Email: <a href="mailto:info@orbitacademy.com">info@orbitacademy.com</a></p>
+          <p>Phone: +20 111 222 3333</p>
+          <p>Address: Orbit Academy, Cairo, Egypt</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>&copy; 2025 Orbit Academy. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="../About/About.html" target="_blank">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

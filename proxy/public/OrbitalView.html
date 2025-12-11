@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orbital View</title>
+    
+    
+    <link rel="stylesheet" href="./orbitalviewStyle.css">
+    <link rel="icon" type="image/png" href="https://images.pexels.com/photos/41006/rocket-launch-rocket-take-off-nasa-41006.jpeg?auto=compress&cs=tinysrgb&w=32&h=32&dpr=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+   
+ <link rel="icon" type="image/jpeg" href="./zeinabimg/favicon.jpeg">
+</head>
+<body>
+<!-- khaled nav -->
+
+     <header class="header">
+      <nav>
+        <ul class="header-container">
+          <li class="logo">
+            <a href="../../Home/Home.html">
+              <img src="./favicon.jpeg" alt="Orbit Academy logo" width="50" />
+            </a>
+          </li>
+          <li>
+            <a href="./Explorer.html">Satellite Explore</a>
+          </li>
+
+          <!-- Search bar -->
+          <li class="search">
+            <input
+              class="input-header-container"
+              type="search"
+              placeholder="Search for anything"
+            />
+          </li>
+
+          <!-- Links -->
+          <li><a href="../../satellite/index.html">Courses</a></li>
+          <li><a href="../../About/About.html">About</a></li>
+          <li><a href="/proxy/public/profile.html">Profile</a></li>
+          <li><a href="../../ORBIT SIGN UP/login.html">Login</a></li>
+          <li><a href="../../ORBIT SIGN UP/signup.html">Sign up </a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Navigation Header
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <div class="navbar-brand-container">
+                <img src="https://images.pexels.com/photos/41006/rocket-launch-rocket-take-off-nasa-41006.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&dpr=1" alt="Orbital View Logo" class="navbar-logo">
+                <span class="navbar-brand">ORBITAL VIEW</span>
+                <span class="navbar-subtitle">Satellite Explorer</span>
+            </div>
+            <button class="btn btn-help" id="helpBtn">Mission Guide</button>
+        </div>
+    </nav> -->
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Explore Earth's Orbital Network</h1>
+                        <p class="hero-description">Track satellites in real-time, analyze Earth imagery, monitor weather patterns, and discover our planet from space with professional-grade tools.</p>
+                        <div class="mission-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">3,000+</div>
+                                <div class="stat-label">Active Satellites</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Real-time Tracking</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">Global</div>
+                                <div class="stat-label">Coverage</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="orbit-visualization">
+                        <div class="orbit-container">
+                            <div class="earth-sphere"></div>
+                            <div class="orbit-ring orbit-1"></div>
+                            <div class="orbit-ring orbit-2"></div>
+                            <div class="orbit-ring orbit-3"></div>
+                            <div class="satellite sat-1"></div>
+                            <div class="satellite sat-2"></div>
+                            <div class="satellite sat-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Tracking Section -->
+    <section class="section location-section" id="location">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="section-content">
+                        <div class="section-header">
+                            <span class="section-number">01</span>
+                            <h2 class="section-title">Location and Tracking</h2>
+                        </div>
+                        <p class="section-description">Precision location services for satellite tracking. Our system uses GPS coordinates to determine your exact position and calculate satellite passes with NASA-grade accuracy.</p>
+                        
+                        <div class="control-panel">
+                            <h5>Ground Station Setup</h5>
+                            <button id="useLocationBtn" class="btn btn-primary-custom mb-3">
+                                <span class="btn-icon"></span>
+                                Activate GPS Location
+                            </button>
+                            
+                            <div class="coordinate-inputs">
+                                <div class="input-group mb-2">
+                                    <span class="input-group-text">Latitude</span>
+                                    <input id="latInput" class="form-control" placeholder="Latitude" type="number" step="any">
+                                </div>
+                                <div class="input-group mb-2">
+                                    <span class="input-group-text">Longitude</span>
+                                    <input id="lngInput" class="form-control" placeholder="Longitude" type="number" step="any">
+                                </div>
+                            </div>
+                            
+                            <div class="tracking-info">
+                                <h6>Tracking Status</h6>
+                                <div id="locationStatus" class="status-indicator">Ready for positioning</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="feature-showcase">
+                        <img src="./1.jpg" alt="GPS Satellite Network" class="showcase-image">
+                        <div class="showcase-overlay">
+                            <h4>Global Positioning System</h4>
+                            <p>Advanced GPS constellation provides centimeter-level accuracy for satellite tracking operations worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Satellite Monitoring Section -->
+    <section class="section satellite-section" id="satellites">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 part2">
+                    <div class="feature-showcase">
+                        
+                        <img src="./zeinabimg/3.jpg" alt="Satellite Launch" class="showcase-image">
+                        <div class="showcase-overlay">
+                            <h4>International Space Station</h4>
+                            <p>Track the ISS and thousands of other satellites orbiting Earth at 27,600 km/h in real-time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="section-content">
+                        <div class="section-header">
+                            <span class="section-number">02</span>
+                            <h2 class="section-title">Satellite Monitoring</h2>
+                        </div>
+                        <p class="section-description">Real-time satellite tracking using NORAD two-line elements. Monitor orbital parameters, pass predictions, and visibility windows with professional accuracy.</p>
+                        
+                        <div class="control-panel">
+                            <h5>Mission Control</h5>
+                            <div class="mb-3">
+                                <input id="satIdInput" class="form-control mb-2" placeholder="NORAD ID (25544 = ISS)" type="number">
+                                <button id="trackIdBtn" class="btn btn-primary-custom w-100">Track Specific Satellite</button>
+                            </div>
+                            
+                            <button id="findAboveBtn" class="btn btn-secondary-custom w-100 mb-3">
+                                Scan Overhead Satellites
+                            </button>
+                            
+                            <div id="satList" class="satellite-list"></div>
+                            
+                            <div class="orbital-info">
+                                <h6>Orbital Mechanics</h6>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <span class="info-label">LEO</span>
+                                        <span class="info-value">160-2000km</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">MEO</span>
+                                        <span class="info-value">2000-35786km</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">GEO</span>
+                                        <span class="info-value">35786km</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Earth Observation Section -->
+    <section class="section earth-section" id="earth">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="section-content">
+                        <div class="section-header">
+                            <span class="section-number">03</span>
+                            <h2 class="section-title">Earth Observation</h2>
+                        </div>
+                        <p class="section-description">Access NASA's Earth Imagery API for high-resolution satellite photography. Analyze land use, weather patterns, and environmental changes from space.</p>
+                        
+                        <div class="control-panel">
+                            <h5>Imaging Systems</h5>
+                            <button id="getImageBtn" class="btn btn-primary-custom w-100 mb-3">
+                                Capture Satellite Image
+                            </button>
+                            
+                            <div id="earthImageContainer" class="image-container">
+                                <img id="earthImg" src="" alt="" class="earth-image d-none">
+                                <div id="imgInfo" class="image-info"></div>
+                            </div>
+                            
+                            <div class="earth-stats">
+                                <h6>Earth Observation Facts</h6>
+                                <ul class="facts-list">
+                                    <li>Landsat program: 50+ years of Earth monitoring</li>
+                                    <li>Resolution: Up to 30cm per pixel</li>
+                                    <li>Coverage: Complete Earth scan every 16 days</li>
+                                    <li>Applications: Climate, agriculture, disasters</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 part3">
+                    <div class="feature-showcase">
+                        <img src="https://dragonflyaerospace.com/wp-content/uploads/2022/05/satellite-remote-sensing.jpg" alt="Earth from Space" class="showcase-image">
+                        <div class="showcase-overlay">
+                            <h4>Remote Sensing Technology</h4>
+                            <p>Advanced multispectral imaging provides critical data for climate research, disaster response, and environmental monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Environmental Data Section -->
+    <section class="section weather-section" id="weather">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="map-container">
+                        <div class="map-header">
+                            <h4>Mission Control Map</h4>
+                            <div class="map-controls">
+                                <input id="countryInput" class="form-control" placeholder="Search country or region">
+                                <button id="countryBtn" class="btn btn-secondary-custom">Locate</button>
+                            </div>
+                        </div>
+                        <div id="map" class="mission-map"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="section-content">
+                        <div class="section-header">
+                            <span class="section-number">04</span>
+                            <h2 class="section-title">Environmental Data</h2>
+                        </div>
+                        <p class="section-description">Real-time weather and atmospheric data integration. Monitor environmental conditions that affect satellite visibility and communication quality.</p>
+                        
+                        <div class="control-panel">
+                            <h5>Atmospheric Conditions</h5>
+                            <div id="weatherBox" class="weather-display">
+                                <div class="weather-loading">Awaiting location data...</div>
+                            </div>
+                            
+                            <div class="environmental-data">
+                                <h6>Monitoring Parameters</h6>
+                                <div class="parameter-grid">
+                                    <div class="parameter-item">
+                                        <span class="param-icon"><i class="bi bi-thermometer-half"></i></span>
+                                        <span class="param-name"><i class="bi bi-thermometer-half"></i>Temperature</span>
+                                    </div>
+                                    <div class="parameter-item">
+                                        <span class="param-icon"><i class="bi bi-wind"></i></span>
+                                        <span class="param-name"><i class="bi bi-wind"></i>Wind Speed</span>
+                                    </div>
+                                    <div class="parameter-item">
+                                        <span class="param-icon"><i class="bi bi-eye-fill"></i></span>
+                                        <span class="param-name"><i class="bi bi-eye-fill"></i>Visibility</span>
+                                    </div>
+                                    <div class="parameter-item">
+                                        <span class="param-icon"><i class="bi bi-cloud-fill"></i></span>
+                                        <span class="param-name"><i class="bi bi-cloud-fill"></i>Cloud Cover</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Resources Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Mission Resources</h3>
+                    <div class="resource-grid">
+                        <div class="resource-item">
+                            <h5>Orbital Mechanics Lab</h5>
+                            <p>Interactive demonstrations of Kepler's laws, orbital elements, and satellite dynamics for advanced space science education.</p>
+                        </div>
+                        <div class="resource-item">
+                            <h5>CubeSat Development</h5>
+                            <p>Complete guide to designing, building, and deploying small satellites including mission planning and regulatory requirements.</p>
+                        </div>
+                        <div class="resource-item">
+                            <h5>Remote Sensing Analysis</h5>
+                            <p>NDVI calculations, spectral analysis tools, and environmental monitoring techniques using satellite imagery data.</p>
+                        </div>
+                        <div class="resource-item">
+                            <h5>Space Weather Monitoring</h5>
+                            <p>Solar activity tracking, radiation environment analysis, and space weather impact on satellite operations.</p>
+                        </div>
+                    </div>
+                    <div class="footer-brand">
+                        <span>ORBITAL VIEW</span>
+                        <span class="footer-tagline">Advancing Space Education Through Technology</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./OrbitalViewScript.js"></script>
+
+</body>
+</html>

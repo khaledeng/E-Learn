@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile -progress tracker</title>
+    
+    <link rel="icon" type="image/jpeg" href="./zeinabimg/favicon.jpeg">
+    <!-- <link rel="stylesheet" href="./orbitalviewStyle.css">
+    <link rel="icon" type="image/png" href="https://images.pexels.com/photos/41006/rocket-launch-rocket-take-off-nasa-41006.jpeg?auto=compress&cs=tinysrgb&w=32&h=32&dpr=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+     -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link href="./profileStyle.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+    <header class="header">
+      <nav >
+        <ul class="header-container">
+          <li class="logo">
+            <a href="../../Home/Home.html">
+              <img src="./favicon.jpeg" alt="logo" width="50" />
+            </a>
+          </li>
+          <li>
+            <a href="../public/OrbitalView.html">Satellite Explore</a>
+          </li>
+
+          <!-- Search bar -->
+          <li class="search">
+            <input
+              class="input-header-container"
+              type="search"
+              placeholder="Search for anything"
+            />
+          </li>
+
+          <!-- Links -->
+          <li><a href="../../satellite/index.html">Courses</a></li>
+          <li><a href="../../proxy/public/OrbitalView.html">Orbital View</a></li>
+          <li><a href="../../About/About.html">About</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="../../ORBIT SIGN UP/login.html">Login</a></li>
+          <li><a href="../../ORBIT SIGN UP/signup.html">Sign up </a></li>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+                <div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown">
+                        <div class="user-avatar me-2">
+                            <!-- <i class="bi bi-person text-white"></i> -->
+                             <img src="https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/profile-boy-icon.png" alt="kareem"  class="profile-pic">
+                        </div>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+
+                        <li><a class="dropdown-item" href="#"> <img src="https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/profile-boy-icon.png" alt="kareem"  class="profile-pic" width="35px"> Kareem Zayaan</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item " href="#">Student</a></li>
+                        
+                        <li><a class="dropdown-item " href="#">Notification</a></li>
+                        <!-- <hr> -->
+                        <li><a class="dropdown-item " href="#">Account settting</a></li>
+                        <li><a class="dropdown-item " href="#">payout and tax setting</a></li>
+                        <hr/>
+                        <li><a class="dropdown-item " href="#">Edit profile</a></li>
+                        <li><a class="dropdown-item " href="#">public profile</a></li>
+                        <hr>
+                        <li><a class="dropdown-item " href="#">Help and support</a></li>
+                        <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+      </nav>
+    </header>
+    <br><br>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container py-5">
+            <!-- Page Title -->
+            <div class="text-center mb-5 mcontent">
+                <h1 class="display-4 fw-bold  mb-3">Your Progress Tracker</h1>
+                <p class="lead  fw-bold " style="color: #2D4D7F; " >Track your progress, manage your courses, and celebrate your achievements</p>
+            </div>
+
+            <!-- Profile Card -->
+            <div class="card profile-card mb-5">
+                <div class="card-body p-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 text-center mb-3 mb-md-0">
+                            <div class="profile-picture position-relative">
+                                <!-- <div class="avatar-large">KZ</div>
+                                <div class="status-indicator"></div> -->
+                                <img src="https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/profile-boy-icon.png" alt="kareem"  class="profile-picture" width="150px">
+
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <h2 class="h3 fw-bold mb-2">Kareem Zayaan</h2>
+                            <p class="text-muted mb-3">kareem.zayaan@email.com</p>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="stat-badge stat-blue">
+                                        <i class="bi bi-star-fill me-2"></i>
+                                        <span>8 Courses Enrolled</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="stat-badge stat-purple">
+                                        <i class="bi bi-clock me-2"></i>
+                                        <span>42 Hours Watched</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="stat-badge stat-green">
+                                        <i class="bi bi-award me-2"></i>
+                                        <span>3 Certificates Earned</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-end">
+                            <button class="btn btn-outline-secondary">
+                                <i class="bi bi-pencil me-1"></i>Edit Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Dashboard & Courses Grid -->
+            <div class="row mb-5">
+               
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="icon-wrapper me-3">
+                                    <i class="bi bi-graph-up text-white"></i>
+                                </div>
+                                <h3 class="h4 fw-bold mb-0">Your Learning Progress</h3>
+                            </div>
+
+                            <div class="progress-list">
+                                <div class="progress-item mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="fw-medium">Satellite Orbits & Mechanics</span>
+                                        <span class="text-muted">78%</span>
+                                    </div>
+                                    <div class="progress progress-custom">
+                                        <div class="progress-bar bg-primary" style="width: 78%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress-item mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="fw-medium">Space Mission Design</span>
+                                        <span class="text-muted">45%</span>
+                                    </div>
+                                    <div class="progress progress-custom">
+                                        <div class="progress-bar bg-purple" style="width: 50%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress-item mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="fw-medium">Rocket Propulsion Systems</span>
+                                        <span class="text-muted">92%</span>
+                                    </div>
+                                    <div class="progress progress-custom">
+                                        <div class="progress-bar bg-success" style="width: 92%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress-item mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="fw-medium">Orbital Dynamics</span>
+                                        <span class="text-muted">23%</span>
+                                    </div>
+                                    <div class="progress progress-custom">
+                                        <div class="progress-bar bg-warning" style="width: 23%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress-item">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="fw-medium">Spacecraft Systems</span>
+                                        <span class="text-muted">67%</span>
+                                    </div>
+                                    <div class="progress progress-custom">
+                                        <div class="progress-bar bg-primary" style="width: 67%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="overall-progress mt-4 p-3 rounded">
+                                <div class="text-center">
+                                    <h5 class="fw-semibold mb-2">Overall Progress</h5>
+                                    <div class="display-6 fw-bold gradient-text">61%</div>
+                                    <p class="text-muted small mb-0">Keep going! You're doing great </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Courses -->
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h4 fw-bold mb-4">My Courses</h3>
+                            
+                            <div class="row g-3" id="coursesGrid">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements Section -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3 class="h4 fw-bold mb-0">Achievements & Certificates</h3>
+                        <span class="text-muted">3 of 4 earned</span>
+                    </div>
+
+                    <div class="row g-4" id="achievementsGrid">
+                        <!-- Achievements will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="logo-icon me-2">
+                            <img src="./zeinabimg/favicon.jpeg" alt="logo" width="40rem">
+                        </div>
+                        <span class="h5 fw-bold mb-0">Orbital Academy</span>
+                    </div>
+                    <p class="text-light mb-3">
+                        Empowering learners worldwide with cutting-edge space technology education. 
+                        Join thousands of students on their journey to master the cosmos.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-outline-light btn-sm face-icon" class="">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm face-icon" class="face-icon">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm face-icon" class="face-icon">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none"><i class="bi bi-people me-2"></i>About Us</a></li>
+                        <li><a href="#" class="text-light text-decoration-none"><i class="bi bi-envelope me-2"></i>Contact</a></li>
+                        <li><a href="#" class="text-light text-decoration-none"><i class="bi bi-shield-check me-2"></i>Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Help Center</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Terms of Service</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-light mb-0">@2025 LearnSpace. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <span class="text-light">Made for space enthusiasts</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <!-- <script src="script.js"></script> -->
+     <script>
+        // Learning Profile Dashboard JavaScript
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize the dashboard
+    initializeDashboard();
+    
+    // Add event listeners
+    addEventListeners();
+    
+    // Animate progress bars
+    animateProgressBars();
+    
+    // Load courses
+    loadCourses();
+    
+    // Load achievements
+    loadAchievements();
+});
+
+// Sample data
+const coursesData = [
+    {
+        id: 1,
+        title: "Satellite Orbits & Mechanics",
+        instructor: "Dr. Sarah Johnson",
+        progress: 78,
+        duration: "12h 30m",
+        students: 2543,
+        thumbnail: "https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg",
+        level: "intermediate"
+    },
+    {
+        id: 2,
+        title: "Space Mission Design",
+        instructor: "Prof. Michael Chen",
+        progress: 45,
+        duration: "8h 15m",
+        students: 1876,
+        thumbnail: "https://images.pexels.com/photos/586063/pexels-photo-586063.jpeg",
+        level: "advanced"
+    },
+    {
+        id: 3,
+        title: "Rocket Propulsion Systems",
+        instructor: "Dr. Emily Rodriguez",
+        progress: 92,
+        duration: "15h 45m",
+        students: 3210,
+        thumbnail: "https://images.pexels.com/photos/586030/pexels-photo-586030.jpeg",
+        level: "expert"
+    },
+    {
+        id: 4,
+        title: "Orbital Dynamics",
+        instructor: "Dr. James Wilson",
+        progress: 23,
+        duration: "10h 20m",
+        students: 1654,
+        thumbnail: "https://images.pexels.com/photos/41951/solar-system-emergence-spitzer-telescope-telescope-41951.jpeg",
+        level: "beginner"
+    }
+];
+
+const achievementsData = [
+    {
+        id: 1,
+        title: "First Steps",
+        description: "Complete your first course",
+        icon: "bi-star-fill",
+        earned: true,
+        date: "Dec 2024"
+    },
+    {
+        id: 2,
+        title: "Dedicated Learner",
+        description: "Complete 3 courses",
+        icon: "bi-trophy-fill",
+        earned: true,
+        date: "Dec 2024"
+    },
+    {
+        id: 3,
+        title: "Expert Level",
+        description: "Complete 5 courses",
+        icon: "bi-award-fill",
+        earned: true,
+        date: "Jan 2025"
+    },
+    {
+        id: 4,
+        title: "Master Student",
+        description: "Complete 10 courses",
+        icon: "bi-bullseye",
+        earned: false
+    }
+];
+
+function initializeDashboard() {
+    console.log('Learning Profile Dashboard initialized');
+    
+    // Add smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+function addEventListeners() {
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        } else {
+            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+        }
+    });
+
+    // Profile edit button
+    const editButton = document.querySelector('.btn-outline-secondary');
+    if (editButton) {
+        editButton.addEventListener('click', function() {
+            showNotification('Profile editing feature coming soon!', 'info');
+        });
+    }
+
+    // Add hover effects to cards
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-4px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+}
+
+function animateProgressBars() {
+    const progressBars = document.querySelectorAll('.progress-bar');
+    
+    // Intersection Observer for animation on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const progressBar = entry.target;
+                const width = progressBar.style.width;
+                progressBar.style.width = '0%';
+                
+                setTimeout(() => {
+                    progressBar.style.width = width;
+                }, 200);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    progressBars.forEach(bar => {
+        observer.observe(bar);
+    });
+}
+
+function loadCourses() {
+    const coursesGrid = document.getElementById('coursesGrid');
+    if (!coursesGrid) return;
+
+    coursesGrid.innerHTML = '';
+
+    coursesData.forEach(course => {
+        const courseCard = createCourseCard(course);
+        coursesGrid.appendChild(courseCard);
+    });
+}
+
+function createCourseCard(course) {
+    const col = document.createElement('div');
+    col.className = 'col-12 mb-3';
+
+    const levelClass = `level-${course.level}`;
+    const levelText = course.level.charAt(0).toUpperCase() + course.level.slice(1);
+
+    col.innerHTML = `
+        <div class="card course-card h-100">
+            <div class="course-thumbnail" style="background-image: url('${course.thumbnail}')">
+                <div class="course-overlay">
+                    <div class="play-button">
+                        <i class="bi bi-play-fill"></i>
+                    </div>
+                </div>
+                <span class="level-badge ${levelClass}">${levelText}</span>
+            </div>
+            <div class="card-body p-3">
+                <h6 class="card-title fw-bold mb-2">${course.title}</h6>
+                <p class="text-muted small mb-2">by ${course.instructor}</p>
+                
+                <div class="d-flex justify-content-between text-muted small mb-3">
+                    <span><i class="bi bi-clock me-1"></i>${course.duration}</span>
+                    <span><i class="bi bi-people me-1"></i>${course.students.toLocaleString()}</span>
+                </div>
+                
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <small class="text-muted">Progress</small>
+                        <small class="fw-bold">${course.progress}%</small>
+                    </div>
+                    <div class="progress progress-custom">
+                        <div class="progress-bar bg-primary" style="width: ${course.progress}%"></div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary btn-sm w-100" onclick="continueLearning(${course.id})">
+                    Continue Learning
+                </button>
+            </div>
+        </div>
+    `;
+
+    return col;
+}
+
+function loadAchievements() {
+    const achievementsGrid = document.getElementById('achievementsGrid');
+    if (!achievementsGrid) return;
+
+    achievementsGrid.innerHTML = '';
+
+    const earnedCount = achievementsData.filter(a => a.earned).length;
+    
+    if (earnedCount === 0) {
+        achievementsGrid.innerHTML = `
+            <div class="col-12">
+                <div class="empty-state">
+                    <div class="empty-icon">
+                        <i class="bi bi-trophy"></i>
+                    </div>
+                    <h5 class="mb-2">Complete a course to earn your first certificate</h5>
+                    <p class="text-muted"></p>
+                </div>
+            </div>
+        `;
+        return;
+    }
+
+    achievementsData.forEach(achievement => {
+        const achievementCard = createAchievementCard(achievement);
+        achievementsGrid.appendChild(achievementCard);
+    });
+}
+
+function createAchievementCard(achievement) {
+    const col = document.createElement('div');
+    col.className = 'col-md-3 col-sm-6';
+
+    const earnedClass = achievement.earned ? 'earned' : 'not-earned';
+    const iconClass = achievement.earned ? 'earned' : 'not-earned';
+
+    col.innerHTML = `
+        <div class="card achievement-card ${earnedClass}">
+            <div class="achievement-icon ${iconClass}">
+                <i class="${achievement.icon}"></i>
+            </div>
+            <h6 class="fw-bold mb-2">${achievement.title}</h6>
+            <p class="text-muted small mb-2">${achievement.description}</p>
+            ${achievement.earned && achievement.date ? 
+                `<small class="text-muted">Earned ${achievement.date}</small>` : 
+                ''
+            }
+            ${achievement.earned ? 
+                '<div class="earned-badge"><i class="bi bi-check"></i></div>' : 
+                ''
+            }
+        </div>
+    `;
+
+    return col;
+}
+
+function continueLearning(courseId) {
+    const course = coursesData.find(c => c.id === courseId);
+    if (course) {
+        showNotification(`Continuing "${course.title}"...`, 'success');
+        // Here you would typically navigate to the course page
+        console.log('Navigate to course:', course);
+    }
+}
+
+function showNotification(message, type = 'info') {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+    notification.style.cssText = `
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+        min-width: 300px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    `;
+    
+    notification.innerHTML = `
+        ${message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Auto remove after 3 seconds
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.remove();
+        }
+    }, 3000);
+}
+
+// Utility functions
+function formatNumber(num) {
+    return num.toLocaleString();
+}
+
+function calculateOverallProgress() {
+    const totalProgress = coursesData.reduce((sum, course) => sum + course.progress, 0);
+    return Math.round(totalProgress / coursesData.length);
+}
+
+// Update overall progress display
+function updateOverallProgress() {
+    const overallProgress = calculateOverallProgress();
+    const progressElement = document.querySelector('.gradient-text');
+    if (progressElement) {
+        progressElement.textContent = `${overallProgress}%`;
+    }
+}
+
+// Initialize tooltips if Bootstrap tooltips are needed
+function initializeTooltips() {
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+}
+
+// Call initialization functions
+document.addEventListener('DOMContentLoaded', function() {
+    updateOverallProgress();
+    initializeTooltips();
+});
+     </script>
+</body>
+</html>

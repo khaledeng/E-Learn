@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Orbit Academy - Sign Up</title>
+   <link rel="icon" href="orbit acadmy.jpg">
+  <link rel="stylesheet" href="styles-signup.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+   <video autoplay muted loop id="bg-video">
+    <source src="media gallery/STScI-3.mp4" type="video/mp4">
+  </video> 
+
+  <div class="form-header">
+  <a href="../Home/Home.html"><img src="media gallery/orbit acadmy.jpg" alt="Orbit Academy Logo" class="logo-img"></a> 
+  <h1>Orbit Academy Sign Up</h1>
+  <p>Stay up-to-date on the latest news and learning tips from Orbit Academy.</p>
+</div>
+    
+  <div class="wrapper">
+    <div class="container">
+      <form id="myForm">
+      <h2>Sign up with Email</h2>
+    
+       <input type="text" id="fullname" placeholder="Full name">
+       <input type="email" id="email" placeholder="Email">
+       <input type="password" id="password" placeholder="password">
+    </form>
+      <label>
+        <input type="checkbox" id="offers"> 
+        Send me satellite learning tips & offers
+      </label>
+      <button onclick="signUp()"> <a href="../ORBIT SIGN UP/login.html" id="logoo">Continue</a> </button>
+      <hr>
+      <p>Other sign up options</p>
+
+      <div class="social">
+  <button title="Google">
+    <img src="media gallery/Google__G__logo.svg.webp" alt="Google" />
+  </button>
+  <button title="Facebook">
+    <img src="media gallery/F.jpg" alt="Facebook" />
+  </button>
+  <button title="Apple">
+    <img src="media gallery/Untitled.png" alt="Apple" />
+  </button>
+  </div>
+
+      <p class="login-link">
+        Already have an account? <a  href="login.html">Log in</a>
+      </p>
+    </div>
+  </div>
+  
+    <footer>
+      <p>Top companies choose Orbit Academy to build in-demand career skills.</p>
+       <p> crafted by zeinab , khaled , omnia , and kareem .</p>
+    </footer>
+  <script>
+  
+  function isValidName(name) {
+    for (let i = 0; i < name.length; i++) {
+      let char = name[i];
+      if (
+        !(char >= "A" && char <= "Z") &&   
+        !(char >= "a" && char <= "z") &&   
+        !(char >= "ء" && char <= "ي") &&   
+        char !== " "                       
+      ) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function signUp() {
+    let name = document.getElementById("fullname").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+
+   
+    if(name === "" || email === "" || password === ""){
+      alert("Please fill all fields");
+      return;
+    }
+
+  
+    if (!isValidName(name)) {
+      alert("Invalid name — the name must contain letters only.");
+      return;
+    }
+
+    
+    if(!email.includes("@")){
+      alert("Email must contain '@gmail.com'");
+      return;
+    }
+
+   
+    if(password.length < 6 || password.length > 12){
+      alert("Password must be between 6 and 12 characters");
+      return;
+    }
+
+    alert("Welcome " + name + " You signed up with " + email);
+  }
+</script>
+
+</body>
+</html>

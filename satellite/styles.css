@@ -1,0 +1,158 @@
+@font-face {
+  font-family: "MyCustom";
+  src: url("Inter/Inter-VariableFont_opsz\,wght.ttf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; 
+}
+body {
+  background-color: #a1a2b4;
+  color: #313640;
+  margin: 0;
+  font-family: "MyCustom", Arial, sans-serif;
+
+  padding: 0;
+}
+
+  .header {
+    background: rgb(159, 133, 133);
+    border-bottom: 1px solid black;
+}
+
+.header-container {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 5px 5px; */
+}
+
+.header-container li {
+  margin: 0 15px;
+    padding:5px ;
+
+}
+
+.header-container a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+.header-container li:not(.search ):not(.logo ):hover {
+  background: #FEE19C;
+  border-radius: 4px;
+}
+
+.input-header-container {
+  width: 450px;
+  padding: 13px 50px;
+  border-radius: 20px;
+  border: 1px solid gray;
+  outline: none;
+  color: gray;
+}
+.input-header-container:focus {
+  border-color: black;
+}
+
+
+
+.card {
+  background-color: #E1E8ED;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(49, 54, 64, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px #FEE19C;
+}
+.card-title {
+  color: #0B1B2B;
+  font-weight: 600;
+}
+.card-text {
+  color: #0B1B2B
+}
+.card .fw-bold {
+  color: #2D4D7F;
+}
+
+
+.badge.bg-success {
+  background-color: #4A6572 !important;
+}
+.badge.bg-primary {
+  background-color: #F2934F !important;
+}
+
+
+.btn-primary,
+.btn-secondary {
+  background-color: #F2934F;
+  border: none;
+}
+.btn-primary:hover,
+.btn-secondary:hover {
+  background-color: #FEE19C;
+}
+.btn-secondary {
+  background-color: #4A6572;
+}
+.btn-secondary:hover {
+  background-color: #FEE19C;
+}
+
+
+.course-header {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(49, 54, 64, 0.15);
+  margin-bottom: 2rem;
+}
+.course-header img {
+  border-radius: 12px;
+}
+h2, h4 {
+  color:#0B1B2B;
+}
+.text-muted {
+  color: #4A6572 !important;
+}
+.curriculum li {
+  margin-bottom: 6px;
+  color: #313640;
+}
+.curriculum li::before {
+  color: #F2934F;
+}
+
+
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 600px; 
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.play-btn:hover {
+  background: rgba(0,0,0,0.7);
+}
+

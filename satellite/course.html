@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+ 
+
+  <style>
+   img, video {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  background-color: #a1a2b4;
+  color: #313640;
+  margin: 0;
+  font-family: "MyCustom", Arial, sans-serif;
+overflow-x: hidden;
+padding:0px;
+
+} 
+    body { background: #E1E8ED;      font-family: "MyCustom", Arial, sans-serif;
+
+  margin:0; }
+
+  
+    header nav {
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      padding: 0.5rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-container {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 0;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+    .header-container li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .header-container li a:hover {
+      color: #FEE19C;
+    }
+    .header-container .logo img {
+      border-radius: 50%;
+    }
+    .search {
+      flex: 1;
+    }
+    .input-header-container {
+      width: 100%;
+      max-width: 400px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+    .video-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 700px; 
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.play-btn:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+
+    
+    .course-header video { 
+      width: 950px; 
+      max-height: 350px; 
+      object-fit: cover; 
+      border-radius: 12px; 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    }
+    .curriculum li { 
+      margin-bottom: 8px; 
+      padding: 6px 10px; 
+      background: #fff; 
+      border-radius: 6px; 
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
+    }
+
+   
+    .sidebar-card { 
+      border-radius: 12px; 
+      background-color: #E1E8ED;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+    }
+    .sidebar-card img { 
+      width: 100%; 
+      height: 180px; 
+      object-fit: cover; 
+    }
+    .price { 
+      font-size: 1.8rem; 
+      font-weight: bold; 
+      color: #0B1B2B; 
+    }
+    .btn-outline-purple { 
+      border: 1.5px solid #FFD166; 
+      color: #0B1B2B;
+      font-weight: 500; 
+    }
+    .btn-outline-purple:hover { 
+      background: #FEE19C;; 
+      color: #fff; 
+    }
+    .sidebar-links a { 
+      color: #0B1B2B; 
+      font-size: 0.9rem; 
+    }
+    .sidebar-links a:hover { 
+      text-decoration: underline; 
+    }
+  </style>
+</head>
+<body>
+
+
+  <header>
+    <nav>
+      <ul class="header-container">
+        <li class="logo">
+          <a href="../Home/Home.html">
+            <img src="logo.jpg" alt="Orbit Academy logo" width="50" />
+          </a>
+        </li>
+        <li><a href="../proxy/public/OrbitalView.html">Satellite Explore</a></li>
+        <li class="search">
+          <input class="input-header-container" type="search" placeholder="Search for anything"/>
+        </li>
+        <li><a href="/satellite/course.html">Courses</a></li>
+        <li><a href="../About/About.html">About</a></li>
+        <li><a href="../proxy/public/profile.html">Profile</a></li>
+        <li><a href="../ORBIT SIGN UP/login.html">Login</a></li>
+        <li><a href="../ORBIT SIGN UP/signup.html">Sign up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ 
+  <div class="container py-5">
+    <div class="row">
+      <span><a href="index.html" class="btn btn-secondary mb-4 w-10px">⬅ Back to Courses</a></span>
+      <div class="col-md-9">
+        
+        <div id="course-details"></div>
+      </div>
+
+      
+      <div class="col-md-3 bg-light">
+        <div class="sidebar-card ">
+          <img src="images/5.jpg" alt="Preview">
+          <div class="card-body p-4 text-center">
+            <p class="fw-bold">Subscribe to top courses</p>
+            <p class="small text-muted">Get this course + 26,000+ more with Personal Plan.</p>
+
+            <button class="btn w-100 mb-2" id="button">Try Personal Plan for free</button>
+            <p class="text-center small text-muted">Starting at 204$ / month</p>
+            <hr>
+            <p class="price">$689.99</p>
+
+            <button class="btn  w-100 mb-2">Add to cart</button>
+            <button class="btn  w-100">Buy now</button>
+
+            <p class="small text-center mt-2 text-muted">30-Day Money-Back Guarantee<br>Full Lifetime Access</p>
+
+            <div class="d-flex justify-content-around sidebar-links mt-2">
+              <a href="#">Share</a>
+              <a href="#">Gift this course</a>
+              <a href="#">Apply Coupon</a>
+            </div>
+
+            <div class="input-group mt-3">
+              <input type="text" class="form-control" placeholder="Enter Coupon">
+              <button class="btn bg-primary">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const courses = [
+    {
+      id: 1,
+      title: "Satellite Fundamentals",
+      desc: "Learn the history, types, and functions of satellites in modern technology.",
+      source: "Coursera – Purdue / NASA content",
+      video:"images/vid1.webm",
+      price: "£349.99",
+      rating: "4.6 (12,340)",
+      curriculum: [
+        "Introduction to satellites",
+        "History and evolution",
+        "Types of satellites",
+        "Applications in modern life"
+      ]
+    },
+    {
+      id: 2,
+      title: "Satellite Orbits & Trajectories",
+      desc: "Understand LEO, MEO, GEO orbits and how they affect satellite missions.",
+      source: "edX – Delft University of Technology",
+      video:"images/vid1.webm",
+      price: "£329.99",
+      rating: " 4.5 (10,820)",
+      curriculum: [
+        "Basics of orbital mechanics",
+        "Low Earth Orbit (LEO)",
+        "Medium Earth Orbit (MEO)",
+        "Geostationary Orbit (GEO)"
+      ]
+    },
+    {
+      id: 3,
+      title: "Satellite Communication Systems",
+      desc: "Explore how satellites transmit and receive data between Earth and space.",
+      source: "Coursera – Institut Mines-Télécom",
+     video:"images/vid1.webm",
+      price: "£379.99",
+      rating: " 4.7 (8,960)",
+      curriculum: [
+        "Principles of communication",
+        "Transponders and antennas",
+        "Signal propagation",
+        "Satellite internet systems"
+      ]
+    },
+    {
+      id: 4,
+      title: "Remote Sensing with Satellites",
+      desc: "Use satellite imagery to monitor Earth's surface and environmental changes.",
+      source: "Coursera – University of Toronto",
+       video:"images/vid1.webm",
+      price: "£319.99",
+      rating: " 4.4 (9,250)",
+      curriculum: [
+        "Principles of remote sensing",
+        "Types of sensors",
+        "Applications in climate monitoring",
+        "Earth observation case studies"
+      ]
+    },
+    {
+      id: 5,
+      title: "GPS & Satellite Navigation",
+      desc: "Learn how satellites power GPS, GNSS systems, and global navigation.",
+      source: "edX – University of Calgary",
+       video:"images/vid1.webm",
+      price: "£359.99",
+      rating: " 4.6 (11,430)",
+      curriculum: [
+        "GPS basics",
+        "GNSS systems overview",
+        "Positioning and timing",
+        "Applications in navigation"
+      ]
+    },
+    {
+      id: 6,
+      title: "Earth Observation Satellites",
+      desc: "Study satellites that monitor weather, climate, and natural resources.",
+      source: "NASA Open Learning Resources",
+       video:"images/vid1.webm",
+      price: "£299.99",
+      rating: " 4.5 (7,800)",
+      curriculum: [
+     "Earth observation systems",
+        "Weather monitoring",
+        "Climate change detection",
+        "Natural resource management"
+      ]
+    },
+    {
+      id: 7,
+      title: "CubeSats & Nano Satellites",
+      desc: "Discover how small satellites are built, launched, and used in research.",
+      source: "Coursera – University of Colorado Boulder",
+       video:"images/vid1.webm",
+      price: "£309.99",
+      rating: "4.3 (6,540)",
+      curriculum: [
+        "Introduction to CubeSats",
+        "Design and construction",
+        "Launch methods",
+        "Applications in research"
+      ]
+    },
+    {
+      id: 8,
+      title: "Satellite Data Analysis & Visualization",
+      desc: "Transform raw satellite data into maps, graphs, and interactive visualizations.",
+      source: "MathWorks / MATLAB satellite courses",
+       video:"images/vid1.webm",
+      price: "£389.99",
+      rating: " 4.7 (13,200)",
+      curriculum: [
+        "Data preprocessing",
+        "Image processing",
+        "Visualization techniques",
+        "Interactive applications"
+      ]
+    },
+    {
+      id: 9,
+      title: "Satellite Launch & Deployment",
+      desc: "Understand the process of launching satellites and placing them into orbit.",
+      source: "edX – MITx, Aerospace Engineering",
+       video:"images/vid1.webm",
+      price: "£369.99",
+      rating: "4.6 (9,950)",
+      curriculum: [
+        "Launch vehicles",
+        "Stages of launch",
+        "Deployment in orbit",
+        "Future launch technologies"
+      ]
+    },
+    {
+      id: 10,
+      title: "Space Environment & Safety",
+      desc: "Learn about space debris, collision avoidance, and satellite safety measures.",
+      source: "ESA / NASA resources",
+       video:"images/vid1.webm",
+      price: "£299.99",
+      rating: "4.4 (7,310)",
+      curriculum: [
+        "Space environment basics",
+        "Radiation and hazards",
+        "Space debris",
+        "Safety protocols"
+      ]
+    },
+    {
+      id: 11,
+      title: "Satellite Imaging for Agriculture & Forestry",
+      desc: "Apply satellite imagery to monitor crops, forests, and land use.",
+      source: "Coursera – Remote Sensing for Sustainable Development",
+     video:"images/vid1.webm",
+      price: "£339.99",
+      rating: " 4.5 (8,210)",
+      curriculum: [
+        "Satellite applications in agriculture",
+        "Forest monitoring",
+        "Sustainable land management",
+        "Practical case studies"
+      ]
+    },
+    {
+      id: 12,
+      title: "Future of Satellites & Space Technology",
+      desc: "Explore upcoming satellite technologies, smart satellites, and Starlink systems.",
+      source: "edX – Space Systems Engineering",
+     video:"images/vid2.webm",
+      price: "£399.99",
+      rating: "4.8 (15,000)",
+      curriculum: [
+        "Future technologies",
+        "Smart satellites",
+        "Mega-constellations",
+        "Starlink and beyond"
+      ]
+    }
+  ];
+
+  
+ const params = new URLSearchParams(window.location.search);
+  const courseId = parseInt(params.get("id"));
+  const course = courses.find(c => c.id === courseId);
+const video = document.getElementById("courseVideo");
+const playBtn = document.getElementById("playBtn");
+
+  if (course) {
+  document.getElementById("course-details").innerHTML = `
+    <div class="course-header mb-4 video-wrapper">
+      <video id="courseVideo" width="100%">
+        <source src="${course.video}" type="video/mp4">
+        Your browser does not support video.
+      </video>
+      <div class="play-btn" id="playBtn">▶</div>
+    </div>
+
+    <h2>${course.title}</h2>
+    <p class="text-muted">${course.desc}</p>
+    <p><strong>Source:</strong> ${course.source}</p>
+    <p><strong>Rating:</strong> ${course.rating}</p>
+    <p><strong>Price:</strong> ${course.price}</p>
+
+    <button class="btn btn-primary mb-4">Enroll Now</button>
+
+    <h4 class="mt-4">Curriculum</h4>
+    <ul class="curriculum">
+      ${course.curriculum.map(item => `<li>${item}</li>`).join("")}
+    </ul>
+  `;
+
+  
+  const video = document.getElementById("courseVideo");
+  const playBtn = document.getElementById("playBtn");
+
+  playBtn.addEventListener("click", () => {
+    video.play();
+    playBtn.style.display = "none";
+  });
+
+  video.addEventListener("pause", () => {
+    playBtn.style.display = "block";
+  });
+} else {
+  document.getElementById("course-details").innerHTML = `<p class="text-danger">Course not found!</p>`;
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

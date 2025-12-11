@@ -1,0 +1,159 @@
+ body {
+  font-family: inter;
+  margin: 0;
+  background: #ebe5e5; 
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100v;
+  object-fit: cover;
+  z-index: -1; 
+} 
+ 
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-header .logo-img {
+  width: 80px;   
+  height: auto;
+  margin-bottom: 10px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.form-header h1 {
+  font-size: 36px;
+  color: #f5f4f4;
+  margin: 5px 0;
+}
+
+.form-header p {
+  font-size: 14px;
+  color: #f0f0f0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.image-box {
+  flex: 1;
+  text-align: center;
+}
+
+.image-box img {
+  max-width: 400px ;
+  height: 500px;
+}
+.container {
+  flex: none;               
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 350px;             
+  max-width: 90%;          
+  text-align: center;
+  margin-left: 60px;  
+  /* margin-right: 10px; */
+}
+
+
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+input[type="text"], input[type="email"] , input[type="password"]{
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+button {
+  background: rgb(134, 28, 134);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+button:hover {
+  background: darkviolet;
+}
+.social {
+  margin: 15px 0;
+  display: flex;          
+  justify-content: center;
+                
+}
+
+.social button {
+  width: 45px;
+  height: 45px;
+  /* border-radius: 50%; */
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+ margin-right: 15px;
+  display: flex;         
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.social button img {
+  width: 24px;
+  height: 24px;
+  
+}
+
+
+.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: purple;
+  text-decoration: none;
+}
+ 
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+
+
+
+#logoo{
+  text-decoration:none;
+  color:white;
+}
